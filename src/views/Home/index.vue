@@ -1,8 +1,6 @@
 <script setup lang='ts'>
 import { ElButton, ElCol, ElContainer, ElFooter, ElHeader, ElImage, ElLink, ElMain, ElRow } from 'element-plus';
 
-//logo
-const logoUrl = 'https://www.bazhuayu.com/images/bzy-logo.png'
 //header的路由
 interface Nav {
     route: string;
@@ -34,7 +32,7 @@ const details: Array<Detail> = [
                 <ElCol :span="6">
                     <ElRow align="middle" justify="center">
                         <ElCol :span="12">
-                            <ElImage :src="logoUrl" />
+                            <ElImage src="https://www.bazhuayu.com/images/bzy-logo.png" />
                         </ElCol>
                     </ElRow>
                 </ElCol>
