@@ -3,7 +3,7 @@ import Home from './views/Home/index.vue'
 </script>
 
 <template>
-  <Home />
+  <RouterView />
 </template>
 
 <style scoped>
