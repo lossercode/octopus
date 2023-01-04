@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import { ElButton, ElCascader, ElCheckbox, ElCheckboxGroup, ElCol, ElForm, ElFormItem, ElInput, ElRadio, ElRadioGroup, ElRow } from 'element-plus';
-import { reactive, ref } from 'vue';
+import { reactive } from 'vue';
 
 //表单接口
 interface WorkBasicInfos {
