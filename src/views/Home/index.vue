@@ -26,74 +26,74 @@ const details: Array<Detail> = [
 
 </script>
 <template>
-    <ElContainer>
-        <ElHeader id="header">
-            <ElRow class="nav-row" align="middle">
-                <ElCol :span="6">
-                    <ElRow align="middle" justify="center">
-                        <ElCol :span="12">
-                            <ElImage src="https://www.bazhuayu.com/images/bzy-logo.png" />
-                        </ElCol>
-                    </ElRow>
-                </ElCol>
-                <ElCol :span="4" v-for="(nav, index) in navList" key="index">
-                    <ElRow align="middle" justify="end">
-                        <ElCol :span="8">
-                            <ElLink :href="nav.route" :underline='false'>{{ nav.name }}</ElLink>
-                        </ElCol>
-                    </ElRow>
-                </ElCol>
+    <el-container>
+        <el-header id="header">
+            <el-row class="nav-row" align="middle">
+                <el-col :span="6">
+                    <el-row align="middle" justify="center">
+                        <el-col :span="12">
+                            <el-image src="https://www.bazhuayu.com/images/bzy-logo.png" />
+                        </el-col>
+                    </el-row>
+                </el-col>
+                <el-col :span="4" v-for="(nav, index) in navList" key="index">
+                    <el-row align="middle" justify="end">
+                        <el-col :span="8">
+                            <el-link :href="nav.route" :underline='false'>{{ nav.name }}</el-link>
+                        </el-col>
+                    </el-row>
+                </el-col>
                 <!-- 登录注册 -->
-                <ElCol :span="6">
-                    <ElRow align="middle" justify="center">
-                        <ElCol :span="6">
-                            <ElLink href="login" :underline="false">
-                                <ElButton type="primary">登录</ElButton>
-                            </ElLink>
-                        </ElCol>
-                        <ElCol :span="6">
-                            <ElLink href="login" :underline="false">
-                                <ElButton>注册</ElButton>
-                            </ElLink>
-                        </ElCol>
-                    </ElRow>
-                </ElCol>
-            </ElRow>
-        </ElHeader>
-        <ElMain>
-            <ElRow justify="center" align="middle">
-                <ElCol :span="12" id="title">
+                <el-col :span="6">
+                    <el-row align="middle" justify="center">
+                        <el-col :span="6">
+                            <el-link href="login" :underline="false">
+                                <el-button type="primary">登录</el-button>
+                            </el-link>
+                        </el-col>
+                        <el-col :span="6">
+                            <el-link href="login" :underline="false">
+                                <el-button>注册</el-button>
+                            </el-link>
+                        </el-col>
+                    </el-row>
+                </el-col>
+            </el-row>
+        </el-header>
+        <el-main>
+            <el-row justify="center" align="middle">
+                <el-col :span="12" id="title">
                     <h1>
                         <span>八爪鱼</span>
                         <br>
                         <span>让数据采集简单高效</span>
                     </h1>
-                </ElCol>
-            </ElRow>
-            <ElRow justify="center" align="middle" class="details">
-                <ElCol :span="6" v-for="(detail, index) in details" key="index">
-                    <ElRow justify="center">
-                        <ElCol :span="6">
-                            <ElImage :src="detail.icon"></ElImage>
-                        </ElCol>
-                    </ElRow>
-                    <ElRow justify="center">
-                        <ElCol :span="12">
+                </el-col>
+            </el-row>
+            <el-row justify="center" align="middle" class="details">
+                <el-col :span="6" v-for="(detail, index) in details" key="index">
+                    <el-row justify="center">
+                        <el-col :span="6">
+                            <el-image :src="detail.icon"></el-image>
+                        </el-col>
+                    </el-row>
+                    <el-row justify="center">
+                        <el-col :span="12">
                             <p class="details-title">{{ detail.title }}</p>
-                        </ElCol>
-                    </ElRow>
-                    <ElRow justify="center">
-                        <ElCol :span="18">
+                        </el-col>
+                    </el-row>
+                    <el-row justify="center">
+                        <el-col :span="18">
                             <p class="details-des">{{ detail.description }}</p>
-                        </ElCol>
-                    </ElRow>
-                </ElCol>
-            </ElRow>
-        </ElMain>
-        <ElFooter id="footer">
+                        </el-col>
+                    </el-row>
+                </el-col>
+            </el-row>
+        </el-main>
+        <el-footer id="footer">
             <div>深圳视界信息技术有限公司版权所有 | 粤公网安备 44030502000701号</div>
-        </ElFooter>
-    </ElContainer>
+        </el-footer>
+    </el-container>
 
 </template>
 <style scoped>

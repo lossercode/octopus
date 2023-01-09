@@ -1,66 +1,65 @@
 <script setup lang='ts'>
-import { ElAside, ElCol, ElContainer, ElIcon, ElImage, ElMain, ElMenu, ElMenuItem, ElMenuItemGroup, ElRow, ElSubMenu } from 'element-plus';
 
 </script>
 <template>
-    <ElContainer>
-        <ElAside id="aside">
-            <ElRow justify="center">
-                <ElCol :span="14">
-                    <ElImage src="https://www.bazhuayu.com/images/bzy-logo.png"></ElImage>
-                </ElCol>
-            </ElRow>
+    <el-container>
+        <el-aside id="aside">
+            <el-row justify="center">
+                <el-col :span="14">
+                    <el-image src="https://www.bazhuayu.com/images/bzy-logo.png"></el-image>
+                </el-col>
+            </el-row>
             <!-- 菜单导航 -->
-            <ElRow id="menu" justify="center">
-                <ElCol :span="18">
-                    <ElMenu default-active="1-1">
-                        <ElSubMenu index="1">
+            <el-row id="menu" justify="center">
+                <el-col :span="18">
+                    <el-menu default-active="myworks" router>
+                        <el-sub-menu index="1">
                             <template #title>
-                                <ElIcon>
+                                <el-icon>
                                     <DocumentRemove />
-                                </ElIcon>
+                                </el-icon>
                                 <span>任务</span>
                             </template>
                             <el-menu-item-group>
-                                <el-menu-item index="1-1">我的任务</el-menu-item>
-                                <el-menu-item index="1-2">新建任务</el-menu-item>
-                                <el-menu-item index="1-3">导入任务</el-menu-item>
+                                <el-menu-item index="myworks">我的任务</el-menu-item>
+                                <el-menu-item index="newwork">新建任务</el-menu-item>
+                                <el-menu-item index="loadwork">导入任务</el-menu-item>
                             </el-menu-item-group>
-                        </ElSubMenu>
-                        <ElSubMenu index="2">
+                        </el-sub-menu>
+                        <el-sub-menu index="2">
                             <template #title>
-                                <ElIcon>
+                                <el-icon>
                                     <PieChart />
-                                </ElIcon>
+                                </el-icon>
                                 <span>分析</span>
                             </template>
                             <el-menu-item-group>
-                                <el-menu-item index="2-1">数据面板</el-menu-item>
-                                <el-menu-item index="2-2">NLP分析</el-menu-item>
+                                <el-menu-item index="dataAnalyse">数据面板</el-menu-item>
+                                <el-menu-item index="nlp">NLP分析</el-menu-item>
                             </el-menu-item-group>
-                        </ElSubMenu>
-                        <ElMenuItem>
-                            <ElIcon>
+                        </el-sub-menu>
+                        <el-menu-item index="vip">
+                            <el-icon>
                                 <PictureRounded />
-                            </ElIcon>
+                            </el-icon>
                             <span>定制</span>
-                        </ElMenuItem>
-                        <ElMenuItem>
-                            <ElIcon>
+                        </el-menu-item>
+                        <el-menu-item index="feedback">
+                            <el-icon>
                                 <Headset />
-                            </ElIcon>
+                            </el-icon>
                             <span>反馈</span>
-                        </ElMenuItem>
-                    </ElMenu>
-                </ElCol>
-            </ElRow>
-        </ElAside>
-        <ElContainer>
-            <ElMain id="main">
+                        </el-menu-item>
+                    </el-menu>
+                </el-col>
+            </el-row>
+        </el-aside>
+        <el-container>
+            <el-main id="main">
                 <RouterView></RouterView>
-            </ElMain>
-        </ElContainer>
-    </ElContainer>
+            </el-main>
+        </el-container>
+    </el-container>
 </template>
 <style scoped>
 #aside {

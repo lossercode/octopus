@@ -1,31 +1,30 @@
 <script setup lang='ts'>
-import { ElButton, ElCascader, ElCol, ElIcon, ElInput, ElRow, ElTable, ElTableColumn } from 'element-plus';
 
 </script>
 <template>
-    <ElRow align="middle" class="filter">
-        <ElCol :span="2" class="options">全部数据</ElCol>
-        <ElCol :span="2" class="options">待运行任务</ElCol>
-        <ElCol :span="2" class="options">运行中任务</ElCol>
-        <ElCol :span="2" class="options">已完成任务</ElCol>
-        <ElCol :span="4" class="options">筛选选项</ElCol>
-        <ElCol :span="4" class="options">
-            <ElInput suffix-icon="Search" />
-        </ElCol>
-        <ElCol :span="2" class="options">
-            <ElButton>刷新</ElButton>
-        </ElCol>
-        <ElCol :span="1" class="options">
-            <ElButton>重置</ElButton>
-        </ElCol>
-    </ElRow>
-    <ElTable class="works">
-        <ElTableColumn label="任务名"></ElTableColumn>
-        <ElTableColumn label="采集状态"></ElTableColumn>
-        <ElTableColumn label="采集数据量"></ElTableColumn>
-        <ElTableColumn label="最后编辑时间"></ElTableColumn>
-        <ElTableColumn label="任务操作"></ElTableColumn>
-    </ElTable>
+    <el-row align="middle" class="filter">
+        <el-col :span="2" class="options">全部数据</el-col>
+        <el-col :span="2" class="options">待运行任务</el-col>
+        <el-col :span="2" class="options">运行中任务</el-col>
+        <el-col :span="2" class="options">已完成任务</el-col>
+        <el-col :span="4" class="options">筛选选项</el-col>
+        <el-col :span="4" class="options">
+            <el-input suffix-icon="Search" />
+        </el-col>
+        <el-col :span="2" class="options">
+            <el-button>刷新</el-button>
+        </el-col>
+        <el-col :span="1" class="options">
+            <el-button>重置</el-button>
+        </el-col>
+    </el-row>
+    <el-table class="works">
+        <el-table-column label="任务名"></el-table-column>
+        <el-table-column label="采集状态"></el-table-column>
+        <el-table-column label="采集数据量"></el-table-column>
+        <el-table-column label="最后编辑时间"></el-table-column>
+        <el-table-column label="任务操作"></el-table-column>
+    </el-table>
 </template>
 <style scoped>
 .options {

@@ -22,11 +22,16 @@ const router = createRouter({
           component: () => import("../views/Space/myworks.vue"),
         },
         {
-          path: "new",
-          name: "new",
-          component: () => import("../views/Space/new.vue"),
+          path: "newwork",
+          name: "newwork",
+          component: () => import("../views/Space/newwork.vue"),
         },
       ],
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("../views/Login/index.vue"),
     },
   ],
 });
